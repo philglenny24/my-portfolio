@@ -19,7 +19,7 @@ You can deploy the website using GitHub Pages or any hosting platform.
   - Projects section
   - Skills section
   - Contact section
-- Grid and Flexbox layout (no CSS frameworks used)
+- Grid and Flexbox layout 
 - Interactive navigation menu (mobile-friendly)
 - Smooth scrolling between sections
 - Clean typography and color scheme
