@@ -1,15 +1,27 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header {
+body {
+    line-height: 1.6;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: #020617;
+    align-items: center;
+    padding: 15px 30px;
+    background: #111;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
 }
 
 nav a {
@@ -18,45 +30,81 @@ nav a {
     text-decoration: none;
 }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background: #38bdf8;
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-.services-container, .skills-container, .projects-container {
-    display: flex;
-    justify-content: center;
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-.service-card, .skill-card, .project-card {
-    background: #1e293b;
+.card {
     padding: 20px;
     border-radius: 10px;
-    width: 200px;
-    transition: 0.3s;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.service-card:hover, .skill-card:hover, .project-card:hover {
-    background: #334155;
-    transition: translateY(-8px);
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-section {
-    padding: 50px 20px;
+.skills span {
+    background: #111;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
 }
 
-footer {
+.footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
+    background: #111;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
