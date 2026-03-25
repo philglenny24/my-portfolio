@@ -13,101 +13,289 @@
     <h1 class="logo">PHILIP</h1>
 
     <nav id="nav">
+        <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
-        ☰
-    </button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 </header>
 
+<!-- HERO -->
 <section id="hero" class="section hero">
-    <div class="container">
-        <h2>Hi, I'm Philip</h2>
-        <p>Aspiring Web Developer</p>
-        <button onclick="scrollToSection('projects')">View Projects</button>
+    <div class="container hero-content">
+        
+        <div class="hero-text">
+            <h2>Hi, I'm Philip</h2>
+            <h3>Fullstack Web Developer</h3>
+
+            <p>
+                I build scalable web applications, modern user interfaces, and backend systems
+                that solve real-world problems. I specialize in turning ideas into functional,
+                efficient, and user-friendly digital products.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+
     </div>
 </section>
-
+<!-- ABOUT -->
 <section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I am a fullstack developer specializing in backend systems, frontend interfaces,
-            and scalable architectures. I enjoy building technology that solves real-world problems.
-        </p>
+    <div class="container about-container">
+
+        <div class="about-text">
+            <h2>About Me</h2>
+
+            <p>
+                I am a fullstack web developer passionate about building scalable,
+                efficient, and user-friendly applications. I enjoy working across both
+                frontend and backend systems to create complete digital solutions.
+            </p>
+
+            <p>
+                My focus is on writing clean, maintainable code and designing systems
+                that perform well under real-world conditions. I am particularly interested
+                in web technologies, APIs, and data-driven applications.
+            </p>
+
+            <p>
+                I continuously learn new technologies and improve my problem-solving skills
+                to deliver better and more reliable software.
+            </p>
+        </div>
+
+        <div class="about-info">
+            <div class="info-card">
+                <h3>Education</h3>
+                <p>Student / Continuous learning in web development</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Focus Areas</h3>
+                <p>Frontend, Backend, APIs, and System Design</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Goal</h3>
+                <p>To build impactful software solutions that solve real problems</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section">
     <div class="container">
+
         <h2>Services</h2>
+        <p class="section-subtitle">
+            I offer a range of development services focused on building efficient, scalable, and user-friendly applications.
+        </p>
 
-        <div class="grid">
-            <div class="card">
-                <h3>Backend Development</h3>
-                <p>Robust and scalable systems using Python, Node.js, and Go.</p>
-            </div>
+        <div class="grid services-grid">
 
-            <div class="card">
+            <div class="service-card">
                 <h3>Frontend Development</h3>
-                <p>Responsive UI using modern frameworks and clean design principles.</p>
+                <p>
+                    Building responsive and interactive user interfaces using modern HTML, CSS, and JavaScript.
+                </p>
             </div>
 
-            <div class="card">
+            <div class="service-card">
+                <h3>Backend Development</h3>
+                <p>
+                    Creating robust server-side applications, APIs, and database systems for reliable performance.
+                </p>
+            </div>
+
+            <div class="service-card">
                 <h3>Fullstack Development</h3>
-                <p>End-to-end application development and integration.</p>
+                <p>
+                    End-to-end development combining both frontend and backend to deliver complete solutions.
+                </p>
             </div>
 
-            <div class="card">
-                <h3>Cloud Solutions</h3>
-                <p>Deployment and infrastructure management on cloud platforms.</p>
+            <div class="service-card">
+                <h3>Deployment & Hosting</h3>
+                <p>
+                    Deploying applications to cloud platforms and ensuring scalability, uptime, and performance.
+                </p>
             </div>
+
         </div>
+
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="section">
     <div class="container">
+
         <h2>Projects</h2>
+        <p class="section-subtitle">
+            Here are some of the projects I’ve worked on, showcasing my skills in building real-world applications.
+        </p>
 
-        <div class="grid">
-            <div class="card">
+        <div class="grid projects-grid">
+
+            <div class="project-card">
                 <h3>FarmBotika</h3>
-                <p>Precision agriculture platform integrating IoT and analytics.</p>
+                <p class="project-description">
+                    A precision agriculture platform that integrates IoT sensors and analytics
+                    to help farmers monitor and optimize crop performance.
+                </p>
+                <div class="project-tags">
+                    <span>IoT</span>
+                    <span>Data</span>
+                    <span>Dashboard</span>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="project-card">
                 <h3>ISP Billing System</h3>
-                <p>Automates financial and operational workflows for ISPs.</p>
+                <p class="project-description">
+                    A system designed to automate billing, user management, and reporting for
+                    Internet Service Providers.
+                </p>
+                <div class="project-tags">
+                    <span>Backend</span>
+                    <span>Automation</span>
+                    <span>System Design</span>
+                </div>
             </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p class="project-description">
+                    A responsive personal portfolio website built using HTML, CSS, and JavaScript
+                    with modern UI principles.
+                </p>
+                <div class="project-tags">
+                    <span>Frontend</span>
+                    <span>UI/UX</span>
+                    <span>Responsive</span>
+                </div>
+            </div>
+
         </div>
+
     </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="section">
     <div class="container">
-        <h2>Skills</h2>
 
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
+        <h2>Skills</h2>
+        <p class="section-subtitle">
+            A summary of my technical skills and tools I use to build modern applications.
+        </p>
+
+        <div class="grid skills-grid">
+
+            <div class="skill-card">
+                <h3>Frontend</h3>
+
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="bar"><div class="progress html"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="bar"><div class="progress css"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar"><div class="progress js"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Backend</h3>
+
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="bar"><div class="progress python"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>APIs</span>
+                    <div class="bar"><div class="progress api"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Others</h3>
+
+                <div class="skill">
+                    <span>Git & GitHub</span>
+                    <div class="bar"><div class="progress git"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>Responsive Design</span>
+                    <div class="bar"><div class="progress responsive"></div></div>
+                </div>
+            </div>
+
         </div>
+
     </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
     <div class="container">
+
         <h2>Contact Me</h2>
-        <p>Feel free to contact for collaborations or inquiries.</p>
-        <p>Email: <a href="mailto:philip10simiyu@gmail.com">philip10simiyu@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/philglenny24">philglenny24</a></p>
+        <p class="section-subtitle">
+            Feel free to reach out for collaborations, opportunities, or any inquiries.
+        </p>
+
+        <div class="contact-grid">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+
+                <p><strong>Email:</strong></p>
+                <p>
+                    <a href="mailto:philip10simiyu@gmail.com">
+                        philip10simiyu@gmail.com
+                    </a>
+                </p>
+
+                <p><strong>GitHub:</strong></p>
+                <p>
+                    <a href="https://github.com/philglenny24" target="_blank">
+                        github.com/philglenny24
+                    </a>
+                </p>
+
+                <p><strong>Location:</strong></p>
+                <p>Nairobi, Kenya</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+
     </div>
 </section>
 
@@ -115,6 +303,11 @@
     <p>&copy; 2026 Philip. All rights reserved.</p>
 </footer>
 
-<script src="index.js"></script>
+<script>
+function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>

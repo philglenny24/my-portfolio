@@ -2,99 +2,453 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    line-height: 1.6;
+    background: #0f172a;
+    color: #e2e8f0;
 }
 
+/* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: #111;
-    color: #fff;
+    padding: 20px 40px;
+    background: #020617;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 1.5rem;
+    color: #38bdf8;
 }
 
 nav a {
-    color: white;
-    margin-left: 15px;
+    margin-left: 20px;
     text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* MOBILE MENU */
 .menu-toggle {
     display: none;
-    font-size: 24px;
     background: none;
     color: white;
+    font-size: 24px;
     border: none;
-    cursor: pointer;
 }
 
-.section {
-    padding: 60px 20px;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-}
-
+/* HERO */
 .hero {
-    text-align: center;
-    background: #f4f4f4;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card {
-    padding: 20px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.skills {
+    height: 90vh;
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 10px 0 20px;
+    color: #94a3b8;
+}
+
+.btn {
+    background: #38bdf8;
+    color: #020617;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    max-width: 700px;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.skills span {
-    background: #111;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 20px;
+.btn.secondary {
+    background: transparent;
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
 }
 
-.footer {
-    text-align: center;
+.btn.secondary:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.section-subtitle {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+/* Project cards */
+.project-card {
+    background: #020617;
     padding: 20px;
-    background: #111;
-    color: white;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(56,189,248,0.2);
+}
+
+.project-description {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.project-tags span {
+    background: #38bdf8;
+    color: #020617;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Optional: better spacing */
+.projects-grid {
+    margin-top: 30px;
+}
+/* Text side */
+.about-text h2 {
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #94a3b8;
+}
+
+/* Info cards */
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.services-grid {
+    margin-top: 30px;
+}
+
+/* Service card */
+.service-card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(56,189,248,0.2);
+}
+
+/* Icon */
+.service-card .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Title */
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Text */
+.service-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+/*skills*/
+.skills-grid {
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+/* Individual skill */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Progress bar */
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #38bdf8;
+    border-radius: 10px;
+}
+
+/* Progress levels */
+.html { width: 95%; }
+.css { width: 90%; }
+.js { width: 85%; }
+.python { width: 80%; }
+.api { width: 75%; }
+.git { width: 85%; }
+.responsive { width: 90%; }
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Contact Info */
+.contact-info {
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.contact-info a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1e293b;
+    color: #fff;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #020617;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0ea5e9;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 40px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* CARDS */
+.card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skills span {
+    background: #38bdf8;
+    color: #020617;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+/* CONTACT LINKS */
+a {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
     nav {
         display: none;
         flex-direction: column;
-        background: #111;
+        background: #020617;
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 0;
         width: 200px;
         padding: 10px;
