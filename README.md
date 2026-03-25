@@ -6,7 +6,7 @@ This project showcases my skills, projects, services, and contact information in
 ##  Live Demo
 You can deploy the website using GitHub Pages or any hosting platform.
 
-*(https://philglenny24.github.io/my-portfolio/)*
+*https://philglenny24.github.io/my-portfolio*
 
 ##  Features
 
