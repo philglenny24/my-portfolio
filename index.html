@@ -6,18 +6,26 @@
     <title>Philip | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header class="header">
     <h1 class="logo">PHILIP</h1>
+
     <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        ☰
+    </button>
 </header>
 
-<section class="section hero">
+<section id="hero" class="section hero">
     <div class="container">
         <h2>Hi, I'm Philip</h2>
         <p>Aspiring Web Developer</p>
@@ -25,8 +33,86 @@
     </div>
 </section>
 
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I am a fullstack developer specializing in backend systems, frontend interfaces,
+            and scalable architectures. I enjoy building technology that solves real-world problems.
+        </p>
+    </div>
+</section>
+
+<section id="services" class="section">
+    <div class="container">
+        <h2>Services</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Backend Development</h3>
+                <p>Robust and scalable systems using Python, Node.js, and Go.</p>
+            </div>
+
+            <div class="card">
+                <h3>Frontend Development</h3>
+                <p>Responsive UI using modern frameworks and clean design principles.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fullstack Development</h3>
+                <p>End-to-end application development and integration.</p>
+            </div>
+
+            <div class="card">
+                <h3>Cloud Solutions</h3>
+                <p>Deployment and infrastructure management on cloud platforms.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2>Projects</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>FarmBotika</h3>
+                <p>Precision agriculture platform integrating IoT and analytics.</p>
+            </div>
+
+            <div class="card">
+                <h3>ISP Billing System</h3>
+                <p>Automates financial and operational workflows for ISPs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to contact for collaborations or inquiries.</p>
+        <p>Email: <a href="mailto:philip10simiyu@gmail.com">philip10simiyu@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/philglenny24">philglenny24</a></p>
+    </div>
+</section>
+
 <footer class="footer">
-    <p>&copy; 2026 Philip</p>
+    <p>&copy; 2026 Philip. All rights reserved.</p>
 </footer>
 
 <script src="index.js"></script>
